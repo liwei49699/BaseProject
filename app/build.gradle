@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    def versions = rootProject.ext.versions
+
+    compileSdkVersion rootProject.ext.versions.compileSdk
+    defaultConfig {
+//        applicationId "com.person.liwei"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.appVersionCode
+        versionName rootProject.ext.versions.appVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //1.配置dimension
+    flavorDimensions "flavors_dev"
+
+    productFlavors {
+
+        //开发版本,不设置 applicationId ,继承 defaultConfig 中的配置
+        flavors_dev {
+
+            applicationId "com.person.liwei"
+//            dimension "dev"
+            manifestPlaceholders = [CHANNEL_NAME: "flavors_dev"]
+        }
+
+        //测试版本, applicationId 替换为 com.person.liwei.dev
+        flavors_check {
+            applicationId "com.person.liwei.check"
+//            dimension "check"
+            manifestPlaceholders = [CHANNEL_NAME: "flavors_check"]
+        }
+
+        //发布版本, applicationId 替换为 com.person.liwei.release
+        flavors_release {
+            applicationId "com.person.liwei.release"
+//            dimension "release"
+            manifestPlaceholders = [CHANNEL_NAME: "flavors_release"]
+        }
+    }
+
+    //支持java8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    def dependencies = rootProject.ext.deps
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation dependencies.support.appcompat
+    implementation rootProject.ext.deps.support.constraint
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation rootProject.ext.deps.support.recyclerview
+    implementation dependencies.BaseRecyclerViewAdapterHelper
+    implementation dependencies.gson
+}

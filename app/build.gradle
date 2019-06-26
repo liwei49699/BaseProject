@@ -20,6 +20,27 @@ android {
         }
     }
 
+    signingConfigs {
+        debug {
+            storeFile file('../config/multi.jks')
+            storePassword '123456'
+            keyPassword '123456'
+            keyAlias = 'channel'
+        }
+        release {
+            storeFile file("../config/multi.jks")
+            storePassword "123456"
+            keyAlias "123456"
+            keyPassword "channel"
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def packTime = new Date().format("YYYYMMdd-HH时", TimeZone.getTimeZone("GMT+08:00"))
+                    outputFileName = "miguplay_${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.productFlavors.get(0).getName()}_${packTime}.apk"
+                }
+            }
+        }
+    }
+
     //1.配置dimension
     flavorDimensions "flavors_dev"
 

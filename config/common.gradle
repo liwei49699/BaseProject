@@ -19,6 +19,7 @@ ext {
                     'design'      : "com.android.support:design:${versions.supportLibrary}",
                     'percent'     : "com.android.support:percent:${versions.supportLibrary}",
                     'appcompat'   : "com.android.support:appcompat-v7:${versions.supportLibrary}",
+                    'design'   : "com.android.support:design:${versions.supportLibrary}",
                     'recyclerview': "com.android.support:recyclerview-v7:${versions.supportLibrary}",
                     'cardview'    : "com.android.support:cardview-v7:${versions.supportLibrary}",
                     'constraint'  : "com.android.support.constraint:constraint-layout:1.1.3",

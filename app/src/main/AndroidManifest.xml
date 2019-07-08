@@ -12,9 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".anim.CustomerObjectAnimActivity">
-
-        </activity>
+        <activity android:name=".dialog.BottomSheetDialogActivity"></activity>
+        <activity android:name=".anim.CustomerObjectAnimActivity"></activity>
         <activity android:name=".anim.LayoutAnimXmlActivity" />
         <activity android:name=".anim.LayoutAnimActivity" />
         <activity android:name=".MainActivity">
@@ -25,8 +24,9 @@
             </intent-filter>
         </activity>
 
-        <meta-data android:name="CHANNEL_NAME" android:value="${CHANNEL_NAME}" />
-
+        <meta-data
+            android:name="CHANNEL_NAME"
+            android:value="${CHANNEL_NAME}" />
     </application>
 
 </manifest>

@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".dialog.BottomSheetDialogActivity"></activity>
-        <activity android:name=".anim.CustomerObjectAnimActivity"></activity>
+        <activity android:name=".dagger.really.DaggerReallyActivity"></activity>
+        <activity android:name=".dagger.test.DaggerTestActivity" />
+        <activity android:name=".dagger.simple.DaggerUseActivity" />
+        <activity android:name=".dialog.BottomSheetDialogActivity" />
+        <activity android:name=".anim.CustomerObjectAnimActivity" />
         <activity android:name=".anim.LayoutAnimXmlActivity" />
         <activity android:name=".anim.LayoutAnimActivity" />
         <activity android:name=".MainActivity">

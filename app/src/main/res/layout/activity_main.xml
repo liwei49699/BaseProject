@@ -46,6 +46,34 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_customer_object_anim"
         android:layout_marginTop="20dp"/>
 
+    <Button
+        android:id="@+id/btn_dagger_test_simple_test"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="dagger的简单测试"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bottom_sheet_dialog"
+        android:layout_marginTop="20dp"/>
 
+    <Button
+        android:id="@+id/btn_dagger_simple_use"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="dagger的简单使用"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dagger_test_simple_test"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btn_dagger_really_use"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="dagger的认真使用"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dagger_simple_use"
+        android:layout_marginTop="20dp"/>
 
 </android.support.constraint.ConstraintLayout>

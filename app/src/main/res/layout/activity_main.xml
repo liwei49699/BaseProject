@@ -1,79 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_layout_anim"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="LayoutAnimation 布局动画，Java实现"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"/>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
-    <Button
-        android:id="@+id/btn_layout_anim_xml"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="LayoutAnimation 布局动画,xml实现"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_layout_anim"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btn_layout_anim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LayoutAnimation 布局动画，Java实现"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/btn_customer_object_anim"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="自定义属性动画"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_layout_anim_xml"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btn_layout_anim_xml"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LayoutAnimation 布局动画,xml实现"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_layout_anim"
+            android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/btn_bottom_sheet_dialog"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="底部弹出对话框"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_customer_object_anim"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btn_customer_object_anim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="自定义属性动画"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_layout_anim_xml"
+            android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/btn_dagger_test_simple_test"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="dagger的简单测试"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_bottom_sheet_dialog"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btn_bottom_sheet_dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="底部弹出对话框"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_customer_object_anim"
+            android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/btn_dagger_simple_use"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="dagger的简单使用"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_dagger_test_simple_test"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btn_dagger_test_simple_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="dagger的简单测试"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_bottom_sheet_dialog"
+            android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/btn_dagger_really_use"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="dagger的认真使用"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_dagger_simple_use"
-        android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/btn_dagger_simple_use"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="dagger的简单使用"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dagger_test_simple_test"
+            android:layout_marginTop="20dp"/>
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_dagger_really_use"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="dagger的认真使用"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dagger_simple_use"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btn_base_project"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="搭建基础项目"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dagger_really_use"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btn_flow_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="自定义流式布局"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_base_project"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btn_refresh_pager"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="刷新pager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_flow_layout"
+            android:layout_marginTop="20dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

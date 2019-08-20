@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    def versions = rootProject.ext.versions
+
+    compileSdkVersion rootProject.ext.versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.appVersionCode
+        versionName rootProject.ext.versions.appVersionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    packagingOptions{
+        exclude 'com/cmcm/gamemoney_sdk/Person.java'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    def dependencies = rootProject.ext.deps
+
+    api dependencies.support.appcompat
+    //material设计
+    api dependencies.support.design
+    api rootProject.ext.deps.support.constraint
+    api dependencies.BaseRecyclerViewAdapterHelper
+    api dependencies.gson
+
+    //网络
+    api("com.squareup.okhttp3:okhttp:3.14.0")
+    //异步框架
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'io.reactivex.rxjava2:rxjava:2.2.8'
+    //网络框架
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //防止内存泄漏
+//    implementation 'com.trello.rxlifecycle3:rxlifecycle-components:2.2.2'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
+
+    //sp
+    api 'net.grandcentrix.tray:tray:0.12.0'
+    //view注解
+    implementation 'com.jakewharton:butterknife:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    //屏幕适配
+    api 'me.jessyan:autosize:1.1.1'
+    //事件通讯框架
+    api 'org.greenrobot:eventbus:3.1.1'
+    //chrome调试框架
+    api 'com.facebook.stetho:stetho:1.5.0'
+    api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    //状态栏
+    api 'com.gyf.immersionbar:immersionbar:2.3.1'
+    api 'com.ruffian.library:RWidgetHelper:1.0.8'
+}

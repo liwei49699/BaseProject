@@ -4,7 +4,7 @@
     package="com.person.liwei">
 
     <application
-        android:name=".MyApplication"
+        android:name=".project.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".dagger.really.DaggerReallyActivity"></activity>
+        <activity android:name=".pager.PagerAdapterActivity"></activity>
+        <activity android:name=".flow.FlowLayoutActivity" />
+        <activity android:name=".dagger.really.DaggerReallyActivity" />
         <activity android:name=".dagger.test.DaggerTestActivity" />
         <activity android:name=".dagger.simple.DaggerUseActivity" />
         <activity android:name=".dialog.BottomSheetDialogActivity" />
@@ -25,11 +27,25 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- 基础工程 -->
+        <activity
+            android:name=".project.activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project.activity.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="CHANNEL_NAME"
             android:value="${CHANNEL_NAME}" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
     </application>
 
 </manifest>

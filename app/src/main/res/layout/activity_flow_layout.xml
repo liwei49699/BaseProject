@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/light_gray_999999"
+    tools:context="com.person.liwei.flow.FlowLayoutActivity"
+    android:orientation="vertical">
+
+    <com.person.liwei.flow.MyViewGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:background="#f00"
+            android:text="123124314"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="#f0f"
+            android:layout_margin="20dp"
+            android:text="123124314"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#f30"
+            android:layout_margin="30dp"
+            android:text="123124314"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fe0"
+            android:layout_margin="40dp"
+            android:text="123124314"/>
+    </com.person.liwei.flow.MyViewGroup>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

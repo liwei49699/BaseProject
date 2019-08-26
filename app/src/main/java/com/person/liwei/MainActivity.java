@@ -11,9 +11,11 @@ import com.person.liwei.dagger.test.DaggerTestActivity;
 import com.person.liwei.dagger.simple.DaggerUseActivity;
 import com.person.liwei.dagger.really.DaggerReallyActivity;
 import com.person.liwei.dialog.BottomSheetDialogActivity;
+import com.person.liwei.entity.RoomDataBaseActivity;
 import com.person.liwei.flow.FlowLayoutActivity;
 import com.person.liwei.gradle.Test;
 import com.person.liwei.pager.PagerAdapterActivity;
+import com.person.liwei.project.MyApplication;
 import com.person.liwei.project.activity.SplashActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_base_project).setOnClickListener(v -> jumpActivity(SplashActivity.class));
         findViewById(R.id.btn_flow_layout).setOnClickListener(v -> jumpActivity(FlowLayoutActivity.class));
         findViewById(R.id.btn_refresh_pager).setOnClickListener(v -> jumpActivity(PagerAdapterActivity.class));
+        findViewById(R.id.btn_room_database).setOnClickListener(v -> jumpActivity(RoomDataBaseActivity.class));
+
+
+        Log.d("--TAG--", "MainActivity onCreate()" + (getApplication() == MyApplication.mApplication));
     }
 
     private void jumpActivity(Class cls){

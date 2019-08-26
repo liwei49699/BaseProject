@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".pager.PagerAdapterActivity"></activity>
+        <activity android:name=".entity.RoomDataBaseActivity"></activity>
+        <activity android:name=".pager.PagerAdapterActivity" />
         <activity android:name=".flow.FlowLayoutActivity" />
         <activity android:name=".dagger.really.DaggerReallyActivity" />
         <activity android:name=".dagger.test.DaggerTestActivity" />

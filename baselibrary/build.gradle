@@ -69,4 +69,6 @@ dependencies {
     //状态栏
     api 'com.gyf.immersionbar:immersionbar:2.3.1'
     api 'com.ruffian.library:RWidgetHelper:1.0.8'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+
 }

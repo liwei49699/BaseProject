@@ -15,8 +15,13 @@ import com.person.liwei.entity.RoomDataBaseActivity;
 import com.person.liwei.flow.FlowLayoutActivity;
 import com.person.liwei.gradle.Test;
 import com.person.liwei.pager.PagerAdapterActivity;
+import com.person.liwei.phone.ui.activity.PhoneHomeActivity;
+import com.person.liwei.phone.ui.activity.WelcomeActivity;
 import com.person.liwei.project.MyApplication;
 import com.person.liwei.project.activity.SplashActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,9 +41,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_flow_layout).setOnClickListener(v -> jumpActivity(FlowLayoutActivity.class));
         findViewById(R.id.btn_refresh_pager).setOnClickListener(v -> jumpActivity(PagerAdapterActivity.class));
         findViewById(R.id.btn_room_database).setOnClickListener(v -> jumpActivity(RoomDataBaseActivity.class));
+        findViewById(R.id.btn_phone_helper_study).setOnClickListener(v -> jumpActivity(WelcomeActivity.class));
 
 
-        Log.d("--TAG--", "MainActivity onCreate()" + (getApplication() == MyApplication.mApplication));
+        Log.d("--TAG--", "PhoneHomeActivity onCreate()" + (getApplication() == MyApplication.mApplication));
     }
 
     private void jumpActivity(Class cls){
@@ -46,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,cls);
         startActivity(intent);
 
-        Log.d("--TAG--", "MainActivity jumpActivity()" + new Test());
+        Log.d("--TAG--", "PhoneHomeActivity jumpActivity()" + new Test());
     }
-
-
 }

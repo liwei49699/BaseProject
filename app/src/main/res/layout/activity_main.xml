@@ -123,5 +123,15 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_refresh_pager"
             android:layout_marginTop="20dp"/>
 
+        <Button
+            android:id="@+id/btn_phone_helper_study"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="学习菜鸟手机助手架构"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_refresh_pager"
+            android:layout_marginTop="20dp"/>
+
     </android.support.constraint.ConstraintLayout>
 </android.support.v4.widget.NestedScrollView>
